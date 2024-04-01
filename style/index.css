@@ -1,0 +1,72 @@
+body {
+    background: radial-gradient(circle, rgba(34,193,195,1) 30%, rgba(253,187,45,1) 100%);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h3 {
+    padding: 3%;
+}
+
+head {
+    text-align: center;
+}
+
+ul {
+    width: fit-content;
+    display: inline-block; 
+    margin: 2% auto;
+    justify-content: center;
+    border: 1px black solid;
+}
+
+li {
+    list-style-position: inside;
+}
+
+p {
+    text-align: center;
+}
+
+section {
+    width: 80%;
+    padding: 5%;
+    margin: 2% auto;
+    border: 1px black solid;
+    font-size: 20px;
+    background-color: #F5F6F7;
+}
+
+img {
+    display: block;
+    margin: 1% auto;
+    max-width: 80%;
+}
+
+p {
+    line-height: 2em;
+}
+
+code {
+    text-align: center;
+    background-color: lightgray;
+    font-size: 18px;
+}
+
+#TOC {
+    text-align: initial;
+}
+
+#TOCSection {
+    width: 25%;
+    margin: 0% auto;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    object-fit: contain;
+}

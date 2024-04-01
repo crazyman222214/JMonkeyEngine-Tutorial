@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<head>
+    <title>JMonkeyEngine</title>
+    <link type="text/css" rel="stylesheet" href="./style/index.css" />
+</head>
+<html>
+    <body>
+        <header>
+            <h1>JMonkeyEngine Tutorial</h1>
+            <hr/>
+        </header>
+        <section id="TOCSection">
+            <h2 id="TOC">Table of Contents:</h2>
+            <hr/>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li>
+                    <a href="#gettingStarted">Getting Started</a>
+                    <ul>
+                        <li><a href="#FirstRunningProject">First Running Project</a></li>
+                        <li><a href="#OverridenMethods">Overriden Methods</a></li>
+                    </ul>
+                    <li><a href="#SimpleApplicationSection">Simple Application</a></li>
+                    <ul>
+                        <li><a href="#UnderstandingTheSimpleApplication">Understanding the <em>Simple</em> Application</a></li>
+                        <li><a href="#Inilitialize">Inilitialize</a></li>
+                    </ul>
+                    <li><a href="#FlyByCameraSection">Fly By Camera</a></li>
+                    <ul>
+                        <li><a href="#UsingTheFlyByCamera">Using the Fly By Camera</a></li>
+                        <li><a href="#HavingFunWithSimpleUpdate">Having Fun With simpleUpdate()</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <hr/>
+            <p>
+                JMonkeyEngine is a modern game engine written primarily written in Java. This is a very useful library with a very "code first" approach.
+                In this tutorial, I will primarily be working within Intellij to showcase how this engine isn't tied to any SDK or IDE.
+                However, the online documentation is rather sloppy for nieche problems or describing the functionality of a certain class.
+            </p>
+            <p>
+                They have a <em>rather mediocre</em> sdk they have programmed with this game engine in mind with further documentation found within the inside code.
+                That can be found <a href="https://github.com/jMonkeyEngine/sdk" target="_blank">here</a>. <br/> Otherwise, you can find more information about JMonkeyEngine and start a project <a href="https://jmonkeyengine.org" target="_blank">here</a>. 
+                <img src="./images/GetStartedButton.png">
+                Press this button on the website to start a project.
+                Input the information for the project and press download a starter project. It is going to download a .zip file with a Java Project inside.
+            </p>
+            <p>
+                This tutorial will not be a tutorial about anything specific, rather I will just demonstrate how to use the most critical parts of the engine.<br/>
+                I will inevitably use assets from my 3d chess project, which were made in a 3d modeler such as Blender, but this <strong>will not</strong> be a tutorial for 3d modeling <em>yet</em>.
+            </p>
+        </section>
+        <section id="gettingStarted">
+            <h2 id="gettingStartedHead">Getting Started</h2>
+            <hr />
+            <h3 id="FirstRunningProject">First Running Project</h3>
+            <p>
+                Now that you have a starter project, you can open and run the project.
+                The directory is
+                <br/>-PROJECT_NAME-/src/main/java/-PACKAGE_NAME-/-PROJECT_NAME-
+            </p>
+            <img src="./images/FileDirectory.png" />
+            <p>
+                If you run the program just as it is, you should get a window that looks like this
+            </p>
+            <img src="./images/FirstRun.png">
+            <p>
+                That blue box is the one created by the initial <code>simpleInitApp()</code>
+                The controls to use the camera are:
+                <div class="container">
+                    <ul>
+                        <li>WASD to move</li>
+                        <li> Q and Z to do up and down the Y-Axis</li>
+                        <li>the mouse to look around</li>
+                        <li>and ESC to close the program.</li>
+                    </ul>
+                </div>
+            </p>
+            <h3 id="OverridenMethods">Overriden Methods</h3>
+            <p>
+                Going back to the code, there are a few things of note.<br/>
+                The <code>Main</code> file contains 3 lines of <strong>important</strong> code.
+                <br/><code>Test app = new Test();</code> creates an instance of this class since <code>Main()</code> is static.
+                <br><code>app.showSettings(false);</code> set this to true and see the settings.
+                <br/><code>app.start();</code> starts the application.
+            </p>
+            <img src="./images/MainMethod.png" />
+            <p>
+                If you'll notice, there is also one other method with a body. The <code>simpleInitApp()</code> method is an overrided method from the parent class, <code>SimpleApplication</code>.
+                It runs as soon as the app is ran inside the Main Method.
+                <br/><code>Box b = new Box(1,1,1);</code> is creating a Box Shape, passing the dimensions through the constructor.
+                <br/><code>Geometry geom = new Geometry("Box", b);</code> is creating a Geometry for the RootNode, passing through a String name of the shape and the variable we created previous, b.
+                <br/><code>Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");</code> is defining the material, which is what the user actually sees, is defined using the <code>assetManager</code>, which is a variable inside our <code>SimpleApplication</code> and with the path of a unshaded texture.
+                <br/><code>mat.setColor("Color", ColorRGBA.Blue);</code> is just setting the color of the material.
+                <br/><code>geom.setMaterial(mat);</code> is setting the material of the geometry to the material we defined up above, <code>mat</code>.
+                <br/><code>rootNode.attachChild(geom);</code> is attaching the geometry to the <code>rootNode</code>, a variable inside <code>SimpleApplication</code>
+            </p>
+
+            <img src="./images/SimpleInitApp.png" width="90%" />
+            <p>The other two methods are part of the abstract methods, but will not be touched on right now.</p>
+        </section>
+
+        <section id="SimpleApplicationSection">
+            <h2>SimpleApplication</h2>
+            <hr/>
+            <h3 id="UnderstandingTheSimpleApplication">Understanding the <em>Simple</em> Application</h3>
+            <p>
+                To truly learn how to operate the concrete class, it is important to delve into the abstract class to truly learn how to utilize the concrete class.
+                <br/> If you press Shift and click on SimpleApplication, it will bring you into the class. <br />
+            </p>
+            <img src="./images/SimpleApplication.png"/>
+            <p>
+                The first thing I would like to point out is at the bottom is the methods you inherit in your <code>Main</code> class.
+            </p>
+            <img src="./images/InheritedMethods.png" />
+
+            <p>
+                Another thing that would help in learning this library is to become familiar with what getters and setters are available to you. <br/>
+                There are certain situations you may end up needing to get the <code>FlyCam</code>, which is your camera.<br/>
+            </p>
+            <p>
+                The next thing that I would like to point out is the constructor of the class. By default, it makes new instances of:
+                <ul>
+                    <li><code>StatsAppState</code></li>
+                    <li><code>FlyCamAppState</code></li>
+                    <li><code>AudioListenerState</code></li>
+                    <li><code>DebugKeysAppState</code></li>
+                    <li><code>ConstantVerifierState</code></li>
+                </ul>
+            </p>
+            <p>
+                This tutorial will be utilizing various methods/variables from these, but it isn't fully necessary to delve into the classes individually.<br />
+                Just know they exist and when they get referenced in here, I will explain how it works.
+            </p>
+            <img src="./images/Constructor.png" />
+
+            <h3 id="Inilitialize">Inilitialize</h3>
+            <p>
+                I am seperating this into it's own section purely because it is a big method and most of it is pretty important to understand as well. <br/>
+            </p>
+            <p>
+                For the most part, this method is to create different variable and assign them. 
+                <ol>
+                    <li>The first notable part is assigning a <code>flyCam</code>, then assigns the state in the <code>stateManager</code>.</li>
+                    <li>The next part adds the mapping to have ESC key close the program and F5 to Hide/Show the stats on the window.</li>
+                    <li>After that, it calls the <code>simpleInitApp()</code>.</li>
+                </ol>
+            </p>
+            <p>
+                <strong>Meaning that as soon as the <code>Main</code> method is called, you need to have the first line make a new instance of the concrete class.</strong><br />
+                As soon as the <code>Main</code> class runs, your <code>SimpleInitApp()</code> code will run <strong>before</strong> anything else in the <code>Main</code> method.<br/>
+                This can be used to do things prior to when the user can see the pop-up window, but it also needs to be used precisely to avoid bugs.
+            </p>
+        </section>
+        <section id="FlyByCameraSection">
+            <h2 id="FlyByCamera">FlyByCamera</h2>
+            <hr/>
+            <h3 id="UsingTheFlyByCamera">Using the FlyByCamera</h3>
+            <p>
+                The <code>flyCam</code> variable is a public variable given to us through the parent class. This is the camera that the player can control.<br />
+                To disable the camera, and disable the player being able to move it, you can use <code>flyCam.setEnabled(false);</code>
+            </p>
+            <img src="./images/setEnabled(false).png" />
+            <p>
+                While it may look the same, the user cannot interact with the camera.
+            </p>
+            <h3 id="MovingTheCamera">Moving The Camera</h3>
+            <p>
+                Because of how they have the encapsulation, we must interact with the position of the camera using <code>flyCam.onAnalog();</code><br/>
+                This method takes in 3 parameters:
+                <ol>
+                    <li>String: Name</li>
+                    <li>int: length</li>
+                    <li>int: duration</li>
+                </ol>
+                <br/>
+                The name parameter has a certain convention that they use. If you Shift + Click on the <code>onAnalog()</code> method, you can find the String Variables.<br />
+                To find the string representation, you can Shift + Click on the CameraInput class to look at all of them.
+            </p>
+            <img src="./images/CameraInput.png"/>
+            <p>
+                Meaning that if I were to write the line <code>flyCam.onAnalog("FLYCAM_StrafeRight", 2, 200);</code> I would get something that looks like this:
+            </p>
+            <img src="./images/onAnalog(Right).png" />
+            <h3 id="HavingFunWithSimpleUpdate">Having fun with simpleUpdate()</h3>
+            <p>
+                One of the defaulted methods within the <code>Main</code> class is the <code>simpleUpdate(float tpf)</code> method. <br/>
+                The one parameter stands for Time Per Frame, which is the &Delta; (Delta) of time between each Frame. <br />
+                We can utilize this part of the code to make it so that we move the camera every frame, effectively making an "Animation". <br />
+            </p>
+            <p>
+                I would personally seperate the function call into a method, so that we can single out all camera movement into one method. <br />
+                Also, would recommend that you make the length of the camera movement <strong>WAY</strong> shorter so you can actually witness the animation.
+            </p>
+            <img src="./images/updateCamera.png" />
+
+            <!--TODO: Make this a recording of JUST the tab so that the quality of the video isn't bad-->
+            <video id="CameraAnimation" autoplay muted loop preload="auto">
+                <source src="./images/CameraAnimation.mp4" type="video/mp4"/>
+            </video>
+        </section>
+        <section>
+            <h2>Creating Models</h2>
+            <hr>
+            <h3>Adding Custom Assets</h3>
+            <p>
+                When I used this engine, It was to create a 3d chess game. So we needed to actually insert the assets into the engine.<br />
+                To do this, we are going to need a .glb file type. In blender, you can export it to such a file.<br/>
+            </p>
+        </section>
+        <!--TODO: Section for User Input-->
+        <!--TODO: Section for Manipulating Game Objects-->
+    </body>
+</html>
