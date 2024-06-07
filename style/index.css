@@ -55,18 +55,14 @@ code {
     font-size: 18px;
 }
 
-#TOC {
-    text-align: initial;
-}
-
-#TOCSection {
-    width: 25%;
-    margin: 0% auto;
-}
-
 video {
     display: block;
     margin: 0 auto;
     width: 70%;
     object-fit: contain;
+}
+
+#TOCSection {
+    width: 25%;
+    margin: 0% auto;
 }
