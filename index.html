@@ -232,7 +232,61 @@
                 To access the file, we are going to use the assetManager & FileLocator import class from JMonkeyEngine. <br />
                 This will help us to be able to access the files. <br />
             </p>
-
+            <p>
+                We need to call the <code>assetManager</code> class built into the <code>SimpleApplication</code> class and use the <code>.registerLocator("/Assets", FileLocator.Class)</code> method.<br />
+                It has two parameters, the first string is to tell the <code>SimpleApplication</code> from which to locate assets for the given AssetLocator.<br />
+                The second parameter is the class type of AssetLocator to use. Primarily you will just use the Parent <code>FileLocator</code> class, but there are use cases where subclasses can be useful!<br />
+                Now we are going to use the <code>.loadModel(-File Directory-)</code>  method and store it as a <code>Spatial</code> variable.<br />
+                Finally we can load the model using <code>rootNode.attachChild(object);</code>
+            </p>
+            <img src="./images/CreateAssetMethod.png" />
+            <p>
+                Now if you were to run the method, you would see something like this:
+            </p>
+            <img src="./images/BlankAssetWindow.png" />
+            <h3>Adding Lighting</h3>
+            <p>
+                As you can see, even though the asset is being created in the world, we cannot see it. <br />
+                This is because loading assets use a lighting system to represent lighting <br />
+                For this, we are going to use the <code>DirectionalLight</code> class. Just know that you can also use any subclass of the abstract <code>Light</code> class. <br />
+                This class is rather simple to implement. First create an instance of the <code>DirectionalLight</code><br />
+                Then we need to assign the direction of the light with <code>.setDirection(Vector3f)</code> method. <br />
+                If you don't understand Vectors, just think of them as arrows pointing from a point outwards. <br />
+                Since we are working in 3d, we need to give it an x, y, & z position <br />
+                Normally we just declare a new instance of the <code>Vector3f</code> class anytime we need to use one. <br />
+                So inside of the <code>setDirection()</code> method, we need to put <code>new Vector3f(-3, 5, 3).normalizelocal()</code> <br />
+                Now I am not going to get into normalizing a vector, but it is just some math to make sure our vectors are correctly project our light. <br />
+                Now all we need to do is add the light to the rootNode with <code>rootNode.addLight(dl)</code>
+            </p>
+            <img src="./images/OneDirectionalLight.png" />
+            <p>
+                If we were to run this, it will look like this:
+            </p>
+            <img src="./images/RunningOneDirectionalLight.png" />
+            <p>
+                Obviously this is not the intended outcome, but here comes the trouble of using DirectionalLight. <br />
+                Since this is just shining light from a given point, it doesn't shine on all sides of the piece. <br />
+                To fix this, we are going to use multiple DirectionalLight to project from all angles. <br />
+                I have tried multiple variations of DirectionalLight placements, but for my project I found it best to have 3 DirectionalLights above the scene and 1 DirectionalLight below the scene. <br />
+                This gets into the setup of your project, and how you want the shadows to appear. I encourage finding different positions to find the best lighting for your project. <br />
+                My snippit of code like this:
+            </p>
+            <img  src="./images/FourDirectionalLight.png"/>
+            <p>
+                If you were to run it, it should look something like this:
+            </p>
+            <img src="./images/RunningFourDirectionalLight.png">
+            <p>
+                One reason I like DirectionalLight is that since you have 4 different light sources, you can use one of them to change the light properties. <br />
+                I added this snippit of code to the simpleUpdate method so we can see a simple animation of the light source. <br />
+                we can also change the color of the first DirectionalLight to red using the <code>.setColor(ColorRGBA.Red);</code> method so that we can actually see the animation. <br />
+                The animation should look something like this:
+            </p>
+            <!--TODO: Record video for animation-->
+            <p>
+                Take a moment after the animation to look at how the colored light changes the asset. Now you can see the creativity of having DirectionalLight!<br />
+                It may not be the right choice for your project, so I would encourage you also look into which subclass of <code>Light</code> to see which one suits your needs. <br />
+            </p>
         </section>
         <!--TODO: Section for User Input-->
         <!--TODO: Section for Manipulating Game Objects-->
