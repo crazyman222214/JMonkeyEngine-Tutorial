@@ -37,6 +37,11 @@
                         <li><a href="#HavingFunWithSimpleUpdate">Having Fun With simpleUpdate()</a></li>
                         
                     </ul>
+                    <li><a href="#CreatingModelsSection">Creating Models</a></li>
+                    <ul>
+                        <li><a href="#AddingCustomAssets">Adding Custom Assets</a></li>
+                        <li><a href="#AddingLighting">Adding Lighting</a></li>
+                    </ul>
                 </li>
             </ul>
         </section>
@@ -115,7 +120,7 @@
             <hr/>
             <h3 id="UnderstandingTheSimpleApplication">Understanding the <em>Simple</em> Application</h3>
             <p>
-                To truly learn how to operate the concrete class, it is important to delve into the abstract class to truly learn how to utilize the concrete class.
+                To truly learn how to operate the concrete class, it is important to delve into the abstract class to learn how what you can use from the parent.
                 <br/> If you press Shift and click on SimpleApplication, it will bring you into the class. <br />
             </p>
             <img src="./images/SimpleApplication.png"/>
@@ -126,9 +131,6 @@
 
             <p>
                 Another thing that would help in learning this library is to become familiar with what getters and setters are available to you. <br/>
-                There are certain situations you may end up needing to get the <code>FlyCam</code>, which is your camera.<br/>
-            </p>
-            <p>
                 The next thing that I would like to point out is the constructor of the class. By default, it makes new instances of:
                 <ul>
                     <li><code>StatsAppState</code></li>
@@ -209,10 +211,10 @@
                 <source src="./images/CameraAnimation.mp4" type="video/mp4"/>
             </video>
         </section>
-        <section id="CreateingModelsSection">
-            <h2>Creating Models</h2>
+        <section id="CreatingModelsSection">
+            <h2 id="Cre">Creating Models</h2>
             <hr>
-            <h3>Adding Custom Assets</h3>
+            <h3 id="AddingCustomAssets">Adding Custom Assets</h3>
             <p>
                 When I used this engine, It was to create a 3d chess game. So we needed to actually insert the assets into the engine.<br />
                 To do this, we are going to need a .glb file type. In blender, you can export it to such a file.<br/>
@@ -244,7 +246,7 @@
                 Now if you were to run the method, you would see something like this:
             </p>
             <img src="./images/BlankAssetWindow.png" />
-            <h3>Adding Lighting</h3>
+            <h3 id="AddingLighting">Adding Lighting</h3>
             <p>
                 As you can see, even though the asset is being created in the world, we cannot see it. <br />
                 This is because loading assets use a lighting system to represent lighting <br />
