@@ -311,11 +311,38 @@
             </p>
             <p>
                 First let's tackle the methods for the inputs we want. <br />
-                I am going to make small methods that I implemented, but for each project will come different input needed. <br />
+                I am going to make small method that I implemented, but for each project will come different input needed. <br />
                 One Example is if you need to lock the camera into a certain position in the world <br />
                 We can use the parameters to our advantage as we can make sure that the button is pressed and that it is the certain input. <br />
                 Since the inputs are a string field that you input, they could be named anything but it is common to use something that is relevant to the input. <br />
                 For this I am just using "P" since I am creating an event that uses the P key. <br />
+                If these conditions are true, we are going to enable the camera just in case it got disabled and move it 5 units to the left. <br />
+            </p>
+            <img src="./images/ActionListener.png" />
+            <p>
+                Obviously this is simplistic, but we can implement more complex methods later. <br />
+                We now need to tell the <code>inputManager</code> about our inputs. <br />
+                We can do this by using the <code>.addMapping()</code> & <code>.addListener</code> methods. <br />
+                We have a couple parameters with the <code>.addMapping()</code> method. <br />
+                We need the String mapping name, which for this is "P", <br />
+                We also need a <code>KeyTrigger</code> object, which takes a enum value, or technically an int value. <br />
+                We can use the <code>KeyInput</code> enum to acomplish this. <br />
+            </p>
+            <p>
+                After we map the input to the inputManager, then we need to add reference to the ActionListener that is going to listen and respond for the action.<br />
+                This also takes two parameters <br />
+                The first one is the ActionListener object, and the other one is the name of our mapping.<br />
+                I seperated this into a method since we are going to expand on different types of user input<br />
+                <img src="./images/addTriggersMethod.png" />
+            </p>
+            <h3 id="MouseInput">Mouse Input</h3>
+            <p>
+                <strong>This section is going to be a precursor to the next section, so you need to read this before the next section.</strong><br /><br />
+
+                This concept in itself is pretty simple since JMonkeyEngine handles a lot of the math, but understanding the math at a fundamental level is needed to understand the code. <br />
+                So, to get mouse input is another input managed by the ActionListener, so we can quickly implement that for the left click. <br />
+                When we add the mapping, we need to use a <code>MouseButtonTrigger</code> object and use the <code>MouseInput.BUTTON_LEFT</code> enum value for the constructor. <br />
+                
             </p>
         </section>
         <!--TODO: Section for User Input-->
