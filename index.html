@@ -1,4 +1,4 @@
-<!-- https://white-beach-02559cb1e.5.azurestaticapps.net -->
+<!-- https:/    /white-beach-02559cb1e.5.azurestaticapps.net -->
 
 
 <!--TODO: Create code widgets to replace images of code-->
@@ -289,6 +289,29 @@
                 Take a moment after the animation to look at how the colored light changes the asset. Now you can see the creativity of having DirectionalLight!<br />
                 It may not be the right choice for your project, so I would encourage you also look into which subclass of <code>Light</code> to see which one suits your needs. <br />
                 Test
+            </p>
+        </section>
+        <section id="UserInputSection">
+            <h2 id="UserInput">User Input</h2>
+            <h3 id="KeyboardInput">Keyboard Input</h3>
+            <p>
+                To implement user input in the form of keyboard input, we need to implement the <code>ActionListener</code> interface. <br />
+                If we look inside this interface, we see that we only need to override the <code>onAction()</code> method, that has 3 parameters. <br />
+                <ol>
+                    <li>String name: The name of the input we are going to use</li>
+                    <li>bool isPressed: Tells if the input was pressed or not</li>
+                    <li>float tpf: the time inbetween each frame</li>
+                </ol>
+            </p>
+            <p>
+                The way we implement this is two fold:
+                <ol>
+                    <li>Make the Methods for each input we want</li>
+                    <li>Tell the <code>inputManager</code> what mappings to listen for and which listener is handling the events</li>
+                </ol>
+                <br />
+                First let's tackle the methods for the inputs we want. <br />
+                I am going to make small methods that I implemented, but for each project will come different input needed. <br/>
             </p>
         </section>
         <!--TODO: Section for User Input-->
