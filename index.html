@@ -311,7 +311,7 @@
             </p>
             <p>
                 First let's tackle the methods for the inputs we want. <br />
-                I am going to make small method that I implemented, but for each project will come different input needed. <br />
+                I am going to make a small method for demonstrational purposes, but for each project will come different inputs needed. <br />
                 One Example is if you need to lock the camera into a certain position in the world <br />
                 We can use the parameters to our advantage as we can make sure that the button is pressed and that it is the certain input. <br />
                 Since the inputs are a string field that you input, they could be named anything but it is common to use something that is relevant to the input. <br />
@@ -342,6 +342,33 @@
                 This concept in itself is pretty simple since JMonkeyEngine handles a lot of the math, but understanding the math at a fundamental level is needed to understand the code. <br />
                 So, to get mouse input is another input managed by the ActionListener, so we can quickly implement that for the left click. <br />
                 When we add the mapping, we need to use a <code>MouseButtonTrigger</code> object and use the <code>MouseInput.BUTTON_LEFT</code> enum value for the constructor. <br />
+                Other than that, it is the same process as before. In the if statement inside the <code>actionListener</code>, I am calling a method I will be doing the logic in. <br />
+            </p>
+            <p>
+                So we are going to do a simple method that detects if you are clicking an object in the world.<br />
+                To do this, we need to create a <code>CollisionResults</code> variable, which is going to hold the result of our collision.<br />
+                We also need to get the cursor position on the screen, which is stored as a Vector2f. <br />
+                We can get this through the <code>inputManager.getCursorPosition()</code> method. <br />
+                Although the screen is 2d, we need to interact with the world, we need three dimensions. <br/>
+                We can get this through the <code>cam.getWorldCoordinates()</code> method.
+                The two parameters are our Vector2f, and the Z position you want to project at. For this I am going to leave it at 0. <br /><br />
+
+                We also need to get the direction that the cursor is pointing in reference to the 3d world. <br />
+                To do this, we are going to use the <code>cam.getWorldCoordinates()</code> <br />
+                We are still going to use our cursor position, but for the Z position, we are going to put 1. <br />
+                After we get the coordinate, we need to subtract it from our position in 3d to get a vector that represents the direction of our point in reference to our world. <br />
+                We still need to normalize the vector. <br />
+            </p>
+
+            <p>
+                Now that we have the point in space that we are clicking at and a direction that we are clicking towards, we can now create a <code>Ray</code>. <br />
+                This ray is a mathematical ray, that starts at a point and is a one-directional line going into a direction. <br />
+                Using this, we can check for collisions with the <code>rootNode.collideWith()</code> method. <br />
+                The two parameters it wants is our ray that we just created, and the <code>CollisionResults</code> variable we made at the beginning. <br />
+                This method finds the collision of all objects that collides with the ray and compiles it into our <code>CollisionResults</code> for us to use. <br />
+                If you look inside the <code>CollisionResults</code> class, you can see that it has an arraylist of <code>CollisionResult</code>, <br />
+                That class has the Geometry that we collided with, the contact point, and distance, along with a few others but we aren't interested in them. <br />
+                With this, we can index into the Geometry that we have clicked. <br />
                 
             </p>
         </section>
