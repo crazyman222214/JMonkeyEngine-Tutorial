@@ -17,7 +17,6 @@ head {
 ul, ol {
     width: fit-content;
     display: inline-block; 
-    margin: 2% auto;
     justify-content: center;
     border: 1px black solid;
 }

@@ -369,6 +369,7 @@
                 If you look inside the <code>CollisionResults</code> class, you can see that it has an arraylist of <code>CollisionResult</code>, <br />
                 That class has the Geometry that we collided with, the contact point, and distance, along with a few others but we aren't interested in them. <br />
                 With this, we can index into the Geometry that we have clicked. <br />
+                Using <code>results.getCollision(0).getGeometry()</code>, we have access to the geometry and can 
                 
             </p>
         </section>
@@ -384,7 +385,8 @@
             </p>
             <p>
                 The difference will become apparent once you use them. They both have their reasons to be used.<br/>
-                
+                From the last section, we now have access to the geometry in our world, so we can use that to see the difference<br />
+
             </p>
 
         </section>
