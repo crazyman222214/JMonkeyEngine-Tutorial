@@ -21,7 +21,7 @@ ul, ol {
 }
 
 li {
-    list-style-position: inside;
+    display: inline-block;
 }
 
 section {
