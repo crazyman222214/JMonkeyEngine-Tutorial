@@ -369,13 +369,14 @@
                 If you look inside the <code>CollisionResults</code> class, you can see that it has an arraylist of <code>CollisionResult</code>, <br />
                 That class has the Geometry that we collided with, the contact point, and distance, along with a few others but we aren't interested in them. <br />
                 With this, we can index into the Geometry that we have clicked. <br />
-                Using <code>results.getCollision(0).getGeometry()</code>, we have access to the geometry and can 
-                
+                Using <code>results.getCollision(0).getGeometry()</code>, we have access to the geometry and can manipulate it.
             </p>
+            <img src="/images/OnClickMethod.png"/>
         </section>
         <section id="ManipulatingGameObjectsSection">
             <h2 id="ManipulatingGamObjects">Manipulating Game Objects</h2>
             <h3>Understanding World & Local Transforms</h3>
+            <p><strong>WARNING: This section builds on the last section, so read that section before moving on</strong></p>
             <p>
                 To properly understand how to manipulate game objects, first you need to know the difference between Local transformations & World transformations. <br />
                 <ul>
@@ -386,12 +387,20 @@
             <p>
                 The difference will become apparent once you use them. They both have their reasons to be used.<br/>
                 From the last section, we now have access to the geometry in our world, so we can use that to see the difference<br />
-
+                If you type <code>geometry.</code>, you can see all of the methods available to you. <br/>
+                Notice that you can set local translation, but you cannot set world translation<br/>
+                This is because the world translation is the position relative to the world, so it doesn't make sense for the geometry to set the world's translation<br />
+                Although you cannot set the world translation, you can get the world translation, and this is so that you can know where the geometry is in relation to the world<br />
+                If we were to set local translation, we are setting how many units away from the spawn location of the geometry. <br />
+                This is a important part to understand as where the geometry spawn is regarded as (0,0,0) with local translation<br />
+                There is another method that works similarly, and that is the <code>.move()</code> method. <br />
+                The <code>.move()</code> method moves the geometry from it's given position. <br />
+                This is the equivalent to a += operator, as it takes the current position and moves it in the given Vector3f <br/>
+                For the most part, it is more intuitive to use <code>.move()</code> over <code>.setLocalTranslation()</code>, with the exception of moving the geometry for the first time since the geometry is at (0,0,0) <br/>
             </p>
+            <img src="./images/Translations.png">
 
         </section>
-        <!--TODO: Section for User Input-->
-        <!--TODO: Section for Manipulating Game Objects-->
     </body>
 </html>
 <footer>
