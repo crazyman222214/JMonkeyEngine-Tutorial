@@ -20,7 +20,7 @@ ul, ol {
 }
 
 li {
-    display: inline-block;
+    display: inline;
 }
 
 section {
