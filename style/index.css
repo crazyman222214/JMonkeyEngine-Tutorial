@@ -14,12 +14,6 @@ head {
     text-align: center;
 }
 
-ul, ol {
-    width: fit-content;
-    justify-content: center;
-    border: 1px black solid;
-}
-
 li {
     list-style-position: inside;
 }
