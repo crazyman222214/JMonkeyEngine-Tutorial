@@ -19,9 +19,6 @@ ul, ol {
     list-style-position: inside;
 }
 
-li {
-    display: inline;
-}
 
 section {
     width: 80%;
