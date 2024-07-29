@@ -17,7 +17,6 @@ head {
 ul, ol {
     text-align: center;
     list-style-position: inside;
-    border: 1px solid black;
 }
 
 li {
