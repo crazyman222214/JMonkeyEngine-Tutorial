@@ -15,7 +15,6 @@ head {
 }
 
 ul, ol {
-    text-align: center;
     list-style-position: inside;
 }
 
@@ -29,7 +28,7 @@ section {
     background-color: #F5F6F7;
     justify-content: center;
     text-align: center;
-    
+
 }
 
 img {
@@ -59,4 +58,8 @@ video {
 #TOCSection {
     width: 25%;
     margin: 0% auto;
+}
+
+#TOC {
+    text-align: left;
 }
