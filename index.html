@@ -400,6 +400,21 @@
                 For this I am just using "P" since I am creating an event that uses the P key. <br />
                 If these conditions are true, we are going to enable the camera just in case it got disabled and move it 5 units to the left. <br />
             </p>
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Keyword">final private</div><div class="Name">actionListener</div> <div>=</div> <div class="Keyword">new ActionListener()</div><div>{</div></li>
+                    <li><div class="Tab"></div><div class="Annotation">@Override</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">public void</div> <div class="Name">onAction</div><div>(String name, boolean isPressed, float fps) {</div></li>
+                    <li><div class="Tab"></div><div class="Tab"></div><div class="Keyword">if</div> <div>(isPressed) {</div></li>
+                    <li><div class="Tab"></div><div class="Tab"></div><div class="Tab"></div><div class="Keyword">if</div><div> (name == "P") {</div></li>
+                    <li><div class="Tab"></div><div class="Tab"></div><div class="Tab"></div><div class="Tab"></div><div class="Keyword">flyCam</div><div class="Method">.SetEnabled(false);</div></li>
+                    <li><div class="Tab"></div><div class="Tab"></div><div class="Tab"></div><div class="Tab"></div><div class="Keyword">flyCam</div><div class="Method">.onAnalog("FLYCAM_StrafeLeft",  5f, 300);</div></li>
+                    <li><div class="Tab"></div><div class="Tab"></div><div class="Tab"></div>}</li>
+                    <li><div class="Tab"></div><div class="Tab"></div>}</li>
+                    <li><div class="Tab"></div>}</li>
+                    <li>}</li>
+                </ol>
+            </div>
             <img src="./images/ActionListener.png" />
             <p>
                 Obviously this is simplistic, but we can implement more complex methods later. <br />
