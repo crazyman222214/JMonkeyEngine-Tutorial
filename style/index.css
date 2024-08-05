@@ -68,8 +68,6 @@ video {
     font-family:"Consolas", 'Courier New', Courier, monospace ;
     font-size: 16px;
     text-align: left;
-    display:grid;
-    justify-content: center;
     margin: 0% auto; 
 }
 
