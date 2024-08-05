@@ -48,6 +48,7 @@ code {
     text-align: center;
     background-color: lightgray;
     font-size: 18px;
+    width: fit-content;
 }
 
 video {
