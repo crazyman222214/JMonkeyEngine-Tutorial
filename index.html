@@ -103,7 +103,7 @@
 
             <div class="CodeWidget">
                 <ol>
-                    <li><div class="Keyword">public static void</div><div class="Name">Main</div> <div>{</div></li>
+                    <li><div class="Keyword">public static void</div><div class="Name">Main()</div> <div>{</div></li>
                     <li><div class="Tab"></div><div class="Keyword">Test</div> <div class="Name">app</div> <div>=</div> <div class="keyword">new</div> <div>Test();</div> </li>
                     <li><div class="Tab"></div><div class="Keyword">app</div><div class="Method">.setShowSettings(false);</div></li>
                     <li><div class="Tab"></div><div class="Keyword">app</div><div class="Method">.start();</div></li>
@@ -126,7 +126,7 @@
             <div class="CodeWidget">
                 <ol>
                     <li><div class="Annotation">@Override</div></li>
-                    <li><div class="Keyword">public void</div><div class="Name">SimpleInitApp</div> <div>{</div></li>
+                    <li><div class="Keyword">public void</div><div class="Name">SimpleInitApp()</div> <div>{</div></li>
                     <li><div class="Tab"></div><div class="Keyword">Box</div><div class="Name">b</div><div>=</div><div class="keyword">new</div> <div>Box(1, 1, 1);</div> </li>
                     <li><div class="Tab"></div><div class="Keyword">Geometry</div> <div class="Name">geom</div> <div>=</div> <div class="keyword">new</div> <div>Geometry("Box", b);</div> </li>
                     <li></li>
@@ -286,6 +286,16 @@
                 Now we are going to use the <code>.loadModel(-File Directory-)</code>  method and store it as a <code>Spatial</code> variable.<br />
                 Finally we can load the model using <code>rootNode.attachChild(object);</code>
             </p>
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Keyword">private void</div><div class="Name">createAsset()</div> <div>{</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">assetManager</div><div class="Method">.registerLocator("/assets", FileLocator.class);</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">Spatial</div><div class="Name">object</div> <div> = </div> <div class="Keyword">assetManager</div><div class="Method">.loadModel("Models/RookFileW.glb");</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">rootNode</div><div class="Method">.attachChild(object);</div></li>
+                    <li>}</li>
+        
+                </ol>
+            </div>
             <img src="./images/CreateAssetMethod.png" />
             <p>
                 Now if you were to run the method, you would see something like this:
