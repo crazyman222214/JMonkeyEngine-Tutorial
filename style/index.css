@@ -55,6 +55,42 @@ video {
     object-fit: contain;
 }
 
+div {
+    float: left;
+    padding: 3px;
+}
+
+.CodeWidget {
+    width: fit-content;
+    height: fit-content;
+    font-family:"Consolas", 'Courier New', Courier, monospace ;
+    font-size: 16px;
+}
+
+.CodeWidget ol{
+    border: 1px solid black;
+    width: auto;
+    
+}
+.CodeWidget li{
+    border-left: 1px solid black;
+    padding: 5px;
+}
+
+.Keyword {
+    color:cornflowerblue;
+}
+
+.Name {
+    color:rgb(227, 97, 97);
+}
+.Tab {
+    width: 35px;
+}
+.Method {
+    margin-left:-7px;
+}
+
 #TOCSection {
     width: 25%;
     margin: 0% auto;
