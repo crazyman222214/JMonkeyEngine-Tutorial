@@ -8,14 +8,14 @@ h1, h2, h3 {
 
 h3 {
     padding: 3%;
-    
+
 }
 
 head {
     text-align: center;
 }
 
-ul, ol :not(.CodeWidget ol) {
+ul, ol :not(.CodeWidget) {
     list-style-position: inside;
 }
 
