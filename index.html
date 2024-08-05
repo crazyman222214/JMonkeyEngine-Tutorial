@@ -430,8 +430,17 @@
                 This also takes two parameters <br />
                 The first one is the ActionListener object, and the other one is the name of our mapping.<br />
                 I seperated this into a method since we are going to expand on different types of user input<br />
-                <img src="./images/addTriggersMethod.png" />
             </p>
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Keyword">private void</div><div class="Name">addTriggers</div> <div>() {</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">inputManager</div><div class="Method">.addMapping("P", </div><div class="Keyword">new</div><div> Keytrigger(KeyInput.KEY_P));</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">inputManager</div><div class="Method">.addListener(actionListener, "P");</div></li>
+                    
+                    <li>}</li>
+                </ol>
+            </div>
+            <img src="./images/addTriggersMethod.png" />
             <h3 id="MouseInput">Mouse Input</h3>
             <p>
                 <strong>This section is going to be a precursor to the next section, so you need to read this before the next section.</strong><br /><br />
