@@ -315,10 +315,6 @@
                 Now I am not going to get into normalizing a vector, but it is just some math to make sure our vectors are correctly project our light. <br />
                 Now all we need to do is add the light to the rootNode with <code>rootNode.addLight(dl)</code>
             </p>
-            <img src="./images/OneDirectionalLight.png" />
-            <p>
-                If we were to run this, it will look like this:
-            </p>
             <div class="CodeWidget">
                 <ol>
                     <li><div class="Keyword">DirectionalLight</div><div class="Name">dl</div> <div> = </div><div class="Keyword">new</div> <div> DirectionalLight();</div></li>
@@ -326,6 +322,10 @@
                     <li><div class="Keyword">rootNode</div><div class="Method">.addLight(dl);</div></li>
                 </ol>
             </div>
+            <img src="./images/OneDirectionalLight.png" />
+            <p>
+                If we were to run this, it will look like this:
+            </p>
             <img src="./images/RunningOneDirectionalLight.png" />
             <p>
                 Obviously this is not the intended outcome, but here comes the trouble of using DirectionalLight. <br />
@@ -335,6 +335,26 @@
                 This gets into the setup of your project, and how you want the shadows to appear. I encourage finding different positions to find the best lighting for your project. <br />
                 My snippit of code like this:
             </p>
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Keyword">DirectionalLight</div><div class="Name">dl1</div> <div> = </div><div class="Keyword">new</div> <div> DirectionalLight();</div></li>
+                    <li><div class="Keyword">dl1</div><div class="Method">.setDirection(</div><div class="Keyword">new</div><div>Vector3f(-3, 5, 3)</div><div class="Method">.normalizeLocal()</div><div>);</div></li>
+                    <li><div class="Keyword">rootNode</div><div class="Method">.addLight(dl1);</div></li>
+                    <li></li>
+                    <li><div class="Keyword">DirectionalLight</div><div class="Name">dl2</div> <div> = </div><div class="Keyword">new</div> <div> DirectionalLight();</div></li>
+                    <li><div class="Keyword">dl2</div><div class="Method">.setDirection(</div><div class="Keyword">new</div><div>Vector3f(-3, 5, 3)</div><div class="Method">.normalizeLocal()</div><div>);</div></li>
+                    <li><div class="Keyword">rootNode</div><div class="Method">.addLight(dl2);</div></li>
+                    <li></li>
+                    <li><div class="Keyword">DirectionalLight</div><div class="Name">dl3</div> <div> = </div><div class="Keyword">new</div> <div> DirectionalLight();</div></li>
+                    <li><div class="Keyword">dl3</div><div class="Method">.setDirection(</div><div class="Keyword">new</div><div>Vector3f(-3, 5, 3)</div><div class="Method">.normalizeLocal()</div><div>);</div></li>
+                    <li><div class="Keyword">rootNode</div><div class="Method">.addLight(dl3);</div></li>
+                    <li></li>
+                    <li><div class="Keyword">DirectionalLight</div><div class="Name">dl4</div> <div> = </div><div class="Keyword">new</div> <div> DirectionalLight();</div></li>
+                    <li><div class="Keyword">dl4</div><div class="Method">.setDirection(</div><div class="Keyword">new</div><div>Vector3f(-3, 5, 3)</div><div class="Method">.normalizeLocal()</div><div>);</div></li>
+                    <li><div class="Keyword">rootNode</div><div class="Method">.addLight(dl4);</div></li>
+                    <li></li>
+                </ol>
+            </div>
             <img  src="./images/FourDirectionalLight.png"/>
             <p>
                 If you were to run it, it should look something like this:
