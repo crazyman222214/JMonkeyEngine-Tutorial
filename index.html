@@ -200,6 +200,13 @@
                 The <code>flyCam</code> variable is a public variable given to us through the parent class. This is the camera that the player can control.<br />
                 To disable the camera, and disable the player being able to move it, you can use <code>flyCam.setEnabled(false);</code>
             </p>
+
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Tab"></div><div class="Keyword">flyCam</div><div class="Method">.setEnabled(false);</div></li>
+                </ol>
+            </div>
+
             <img src="./images/setEnabled(false).png" />
             <p>
                 While it may look the same, the user cannot interact with the camera.
@@ -232,6 +239,13 @@
                 I would personally seperate the function call into a method, so that we can single out all camera movement into one method. <br />
                 Also, I would recommend that you make the length of the camera movement <strong>WAY</strong> shorter so you can actually witness the animation.
             </p>
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Keyword">private void</div><div class="Name">updateCamera()</div> <div>{</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">flyCam</div><div class="Method">.onAnalog("FLYCAM_StrafeRight", 0.02f, 300);</div></li>
+                    <li>}</li>
+                </ol>
+            </div>
             <img src="./images/updateCamera.png" />
 
             <!--TODO: Make this a recording of JUST the tab so that the quality of the video isn't bad-->
