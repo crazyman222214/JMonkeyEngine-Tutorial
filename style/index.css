@@ -14,7 +14,7 @@ head {
     text-align: center;
 }
 
-ul, ol {
+ul {
     list-style-position: inside;
 }
 
