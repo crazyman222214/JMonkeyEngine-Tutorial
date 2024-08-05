@@ -19,7 +19,6 @@ ul, ol {
     list-style-position: inside;
 }
 
-
 section {
     width: 80%;
     padding: 5%;
@@ -74,6 +73,7 @@ div {
     width: auto;
     list-style-position: inherit;
 }
+
 .CodeWidget li{
     border-left: 1px solid black;
     padding: 5px;
@@ -86,9 +86,15 @@ div {
 .Name {
     color:rgb(227, 97, 97);
 }
+
+.Annotation {
+    color: rgb(228, 188, 57);
+}
+
 .Tab {
     width: 35px;
 }
+
 .Method {
     margin-left:-7px;
 }
