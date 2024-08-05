@@ -72,6 +72,7 @@ div {
 .CodeWidget ol{
     border: 1px solid black;
     width: auto;
+    list-style-position: inherit;
     
 }
 .CodeWidget li{
