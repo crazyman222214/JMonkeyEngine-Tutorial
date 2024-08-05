@@ -319,6 +319,15 @@
             <p>
                 If we were to run this, it will look like this:
             </p>
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Keyword">private void</div><div class="Name">createAsset()</div> <div>{</div></li>
+                    <li><div class="Keyword">DirectionalLight</div><div class="Name">dl</div> <div> = </div><div class="Keyword">new</div> <div> DirectionalLight();</div></li>
+                    <li><div class="Keyword">dl</div><div class="Method">.setDirection(</div><div class="Keyword">new</div><div>Vector3f(-3, 5, 3)</div><div class="Method">.normalizeLocal()</div><div>);</div></li>
+                    <li><div class="Keyword">rootNode</div><div class="Method">.addLight(dl);</div></li>
+                    <li>}</li>
+                </ol>
+            </div>
             <img src="./images/RunningOneDirectionalLight.png" />
             <p>
                 Obviously this is not the intended outcome, but here comes the trouble of using DirectionalLight. <br />
