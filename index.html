@@ -123,6 +123,22 @@
                 <br/><code>rootNode.attachChild(geom);</code> is attaching the geometry to the <code>rootNode</code>, a variable inside <code>SimpleApplication</code>
             </p>
 
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Annotation">@Override</div></li>
+                    <li><div class="Keyword">public void</div><div class="Name">SimpleInitApp</div> <div>{</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">Box</div><div class="Name">b</div><div>=</div><div class="keyword">new</div> <div>Box(1, 1, 1);</div> </li>
+                    <li><div class="Tab"></div><div class="Keyword">Geometry</div> <div class="Name">geom</div> <div>=</div> <div class="keyword">new</div> <div>Geometry("Box", b);</div> </li>
+                    <li></li>
+                    <li><div class="Tab"></div><div class="Keyword">Material</div> <div class="Name">mat</div> <div>=</div> <div class="keyword">new</div> <div>Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");</div> </li>
+                    <li><div class="Tab"></div><div class="Keyword">mat</div><div class="Method">.setColor("Color", ColorRGBA.Blue);</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">geom</div><div class="Method">.setMaterial(mat);</div></li>
+                    <li></li>
+                    <li><div class="Tab"></div><div class="Keyword">rootNode</div><div class="Method">.attachNode(mat);</div></li>
+                    <li>}</li>
+                </ol>
+            </div>
+
             <img src="./images/SimpleInitApp.png" width="90%" />
             <p>The other two methods are part of the abstract methods, but will not be touched on right now.</p>
         </section>
