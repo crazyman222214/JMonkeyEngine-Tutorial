@@ -114,3 +114,8 @@ video {
     text-align: left;
     border: 1px solid black;
 }
+
+#FooterContainer {
+    height: 10%;
+    background-color: #F5F6F7;
+}
