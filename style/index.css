@@ -126,4 +126,10 @@ footer {
 #FooterContainer {
     height: 10%;
     background-color: #F5F6F7;
+    float: left;
+}
+
+#FooterContainer div {
+    min-width: 33%;
+    width: 33%;
 }
