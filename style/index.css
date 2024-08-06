@@ -63,12 +63,13 @@ video {
 
 .CodeWidget {
     width: fit-content;
-    min-width: 30%;
+    min-width: 50%;
     height: fit-content;
     font-family:"Consolas", 'Courier New', Courier, monospace ;
     font-size: 16px;
     text-align: left;
     margin: 0% auto; 
+    background-color: lightgrey;
 }
 
 .CodeWidget ol{
