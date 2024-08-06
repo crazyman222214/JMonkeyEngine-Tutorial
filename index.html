@@ -50,9 +50,9 @@
             <h2>Introduction</h2>
             <hr/>
             <p>
-                JMonkeyEngine is a modern game engine written primarily written in Java. This is a very useful library with a very "code first" approach.
-                In this tutorial, I will primarily be working within Intellij to showcase how this engine isn't tied to any SDK or IDE.
+                JMonkeyEngine is a modern game engine written primarily written in Java. This is a very useful library with a "code first" approach.
                 However, the online documentation is rather sloppy for nieche problems or describing the functionality of a certain class.
+                In this tutorial, I will be working within Intellij to showcase how this engine isn't tied to any SDK or IDE.
             </p>
             <p>
                 They have a <em>rather mediocre</em> sdk they have programmed with this game engine in mind with further documentation found within the inside code.
@@ -62,8 +62,8 @@
                 Input the information for the project and press download a starter project. It is going to download a .zip file with a Java Project inside.
             </p>
             <p>
-                This tutorial will not be a tutorial about anything specific, rather I will just demonstrate how to use the most critical parts of the engine.<br/>
-                I will inevitably use assets from my 3d chess project, which were made in a 3d modeler such as Blender, but this <strong>will not</strong> be a tutorial for 3d modeling <em>yet</em>.
+                This tutorial will not be a tutorial about anything specific, rather I will demonstrate how to use the most critical parts of the engine.<br/>
+                I will inevitably use assets from my 3d chess project, which were made in a 3d modeler such as Blender, but this <strong>will not</strong> be a tutorial for 3d modeling.
             </p>
         </section>
         <section id="gettingStarted">
@@ -71,13 +71,12 @@
             <hr />
             <h3 id="FirstRunningProject">First Running Project</h3>
             <p>
-                Now that you have a starter project, you can open and run the project.
-                The directory is
+                Now that you have a starter project, you can open and run the project. The directory is
                 <br/>-PROJECT_NAME-/src/main/java/-PACKAGE_NAME-/-PROJECT_NAME-
             </p>
             <img src="./images/FileDirectory.png" />
             <p>
-                If you run the program just as it is, you should get a window that looks like this
+                If you run the program just as it is, you should get a window that looks like this:
             </p>
             <img src="./images/FirstRun.png">
             <p>
@@ -110,8 +109,6 @@
                     <li>}</li>
                 </ol>
             </div>
-
-            <img src="./images/MainMethod.png" />
             <p>
                 If you'll notice, there is also one other method with a body. The <code>simpleInitApp()</code> method is an overrided method from the parent class, <code>SimpleApplication</code>.
                 It runs as soon as the app is ran inside the Main Method.
@@ -139,7 +136,6 @@
                 </ol>
             </div>
 
-            <img src="./images/SimpleInitApp.png" width="90%" />
             <p>The other two methods are part of the abstract methods, but will not be touched on right now.</p>
         </section>
 
@@ -207,7 +203,6 @@
                 </ol>
             </div>
 
-            <img src="./images/setEnabled(false).png" />
             <p>
                 While it may look the same, the user cannot interact with the camera.
             </p>
@@ -248,8 +243,6 @@
                     <li>}</li>
                 </ol>
             </div>
-
-            <img src="./images/updateCamera.png" />
 
             <!--TODO: Make this a recording of JUST the tab so that the quality of the video isn't bad-->
             <video id="CameraAnimation" autoplay muted loop preload="auto">
@@ -296,7 +289,6 @@
         
                 </ol>
             </div>
-            <img src="./images/CreateAssetMethod.png" />
             <p>
                 Now if you were to run the method, you would see something like this:
             </p>
@@ -322,7 +314,6 @@
                     <li><div class="Keyword">rootNode</div><div class="Method">.addLight(dl);</div></li>
                 </ol>
             </div>
-            <img src="./images/OneDirectionalLight.png" />
             <p>
                 If we were to run this, it will look like this:
             </p>
@@ -355,7 +346,6 @@
                     <li></li>
                 </ol>
             </div>
-            <img  src="./images/FourDirectionalLight.png"/>
             <p>
                 If you were to run it, it should look something like this:
             </p>
@@ -415,7 +405,6 @@
                     <li>}</li>
                 </ol>
             </div>
-            <img src="./images/ActionListener.png" />
             <p>
                 Obviously this is simplistic, but we can implement more complex methods later. <br />
                 We now need to tell the <code>inputManager</code> about our inputs. <br />
@@ -493,7 +482,6 @@
                     <li>}</li>
                 </ol>
             </div>
-            <img src="/images/OnClickMethod.png"/>
         </section>
         <section id="ManipulatingGameObjectsSection">
             <h2 id="ManipulatingGamObjects">Manipulating Game Objects</h2>
@@ -533,7 +521,6 @@
                     <li><div class="Keyword">geometry</div><div class="Method">.getWordTranslation();</div></li>
                 </ol>
             </div>
-            <img src="./images/Translations.png">
 
         </section>
     </body>
