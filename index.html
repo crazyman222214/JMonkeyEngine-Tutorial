@@ -477,6 +477,22 @@
                 With this, we can index into the Geometry that we have clicked. <br />
                 Using <code>results.getCollision(0).getGeometry()</code>, we have access to the geometry and can manipulate it.
             </p>
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Keyword">private void</div><div class="Name">clickMouse</div> <div>() {</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">CollisionResults</div><div class="Name">results</div><div> = </div><div class="Keyword">new</div><div>CollisionResults();</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">Vector2f</div><div class="Name">cursorPosition</div><div> = </div><div class="Keyword">inputManager</div><div class="Method">.getCursorPosition();</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">Vector3f</div><div class="Name">click3d</div><div> = </div><div class="Keyword">cam</div><div class="Method">.getWorldCoordinates(cursorPosition, 0f);</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">Vector3f</div><div class="Name">direction</div><div> = </div><div class="Keyword">cam</div><div class="Method">.getWorldCoordinates(cursorPosition, 1f).subtractLocal(click3d).normalizeLocal();</div></li>
+                    <li></li>
+                    <li><div class="Tab"></div><div class="Keyword">Ray</div><div class="Name">ray</div><div> = </div><div class="Keyword">new</div><div>Ray(click3d, direction);</div></li>
+                    <li><div class="Tab"></div><div class="Keyword">rootNode</div><div class="Method">.collideWith(ray, results);</div></li>
+                    <li></li>
+                    <li><div class="Tab"></div><div class="Keyword">Geometry</div><div class="Name">geometry</div><div> = </div><div class="Keyword">results</div><div class="Method">.getCollision(0).getGeometry();</div></li>
+                    <li><div class="Tab"></div><div class=Keyword>System</div><div class="Method">.Out.Println(geometry.getName());</div></li>
+                    <li>}</li>
+                </ol>
+            </div>
             <img src="/images/OnClickMethod.png"/>
         </section>
         <section id="ManipulatingGameObjectsSection">
@@ -504,6 +520,19 @@
                 This is the equivalent to a += operator, as it takes the current position and moves it in the given Vector3f <br/>
                 For the most part, it is more intuitive to use <code>.move()</code> over <code>.setLocalTranslation()</code>, with the exception of moving the geometry for the first time since the geometry is at (0,0,0) <br/>
             </p>
+            <div class="CodeWidget">
+                <ol>
+                    <li><div class="Comment">//Sets the local translation to (3,3,3)</div></li>
+                    <li><div class="Keyword">geometry</div><div class="Method">.setLocalTranslation(</div><div class="Keyword">new</div><div>Vector3f(3,3,3));</div></li>
+                    <li></li>
+                    <li><div class="Comment">//From the local translation (3,3,3), it will move it another 3 units</div></li>
+                    <li><div class="Comment">//Making the local translation (6,6,6)</div></li>
+                    <li><div class="Keyword">geometry</div><div class="Method">.move(</div><div class="Keyword">new</div><div>Vector3f(3,3,3));</div></li>
+                    <li></li>
+                    <li><div class="Comment">//Returns the translation of geometry in relation to world coordinates</div></li>
+                    <li><div class="Keyword">geometry</div><div class="Method">.getWordTranslation();</div></li>
+                </ol>
+            </div>
             <img src="./images/Translations.png">
 
         </section>
