@@ -63,6 +63,7 @@ video {
 
 .CodeWidget {
     width: fit-content;
+    min-width: 30%;
     height: fit-content;
     font-family:"Consolas", 'Courier New', Courier, monospace ;
     font-size: 16px;
