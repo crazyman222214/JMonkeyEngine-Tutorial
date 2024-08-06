@@ -78,13 +78,13 @@ footer {
     font-size: 16px;
     text-align: left;
     margin: 0% auto; 
-    background-color: lightgrey;
     overflow:auto;
 }
 
 .CodeWidget ol{
     border: 1px solid black;
     width: auto;
+    background-color: lightgrey;
     list-style-position: inherit;
 }
 
