@@ -13,6 +13,8 @@ h3 {
 
 head {
     text-align: center;
+    background-color: #F5F6F7;
+    height:10%;
 }
 
 ul, ol {
@@ -70,6 +72,7 @@ video {
     text-align: left;
     margin: 0% auto; 
     background-color: lightgrey;
+    overflow:scroll;
 }
 
 .CodeWidget ol{
