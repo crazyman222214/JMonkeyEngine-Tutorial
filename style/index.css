@@ -79,7 +79,7 @@ footer {
     text-align: left;
     margin: 0% auto; 
     background-color: lightgrey;
-    overflow:scroll;
+    overflow:auto;
 }
 
 .CodeWidget ol{
