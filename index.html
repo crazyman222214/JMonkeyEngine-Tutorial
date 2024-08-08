@@ -98,7 +98,7 @@
             </p>
             <img src="./images/FirstRun.png">
             <p>
-                That blue box is the one created by the initial <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/simpleapplication.html">SimpleInitApp()</a></code>
+                That blue box is the one created by the initial <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/simpleapplication.html">SimpleInitApp()</a></code><br />
                 The controls to use the camera are:
                 <div class="container">
                     <ul>
@@ -112,10 +112,11 @@
             <h3 id="OverridenMethods">Overriden Methods</h3>
             <p>
                 Going back to the code, there are a few things of note.<br/>
-                The <code>Main</code> method contains 3 lines of <strong>important</strong> code.
-                <br/><code>Test app = new Test();</code> creates an instance of this class since <code>Main()</code> is static.
-                <br><code>app.showSettings(false);</code> set this to true and see the settings.
-                <br/><code>app.start();</code> starts the application.
+                The <code href="https://www.baeldung.com/java-main-method">Main</code> method contains 3 lines of <strong>important</strong> code.<br/>
+                <code href="">Test app = new Test();</code> creates an instance of this class since <code>Main()</code> is static.<br/>
+
+                <code>app.showSettings(false);</code> set this to true and see the settings.<br/>
+                <code>app.start();</code> starts the application.
             </p>
 
             <div class="CodeWidget">
@@ -128,14 +129,14 @@
                 </ol>
             </div>
             <p>
-                If you'll notice, there is also one other method with a body. The <code>simpleInitApp()</code> method is an overrided method from the parent class, <code>SimpleApplication</code>.
-                It runs as soon as the app is ran inside the Main Method.
-                <br/><code>Box b = new Box(1,1,1);</code> is creating a Box Shape, passing the dimensions through the constructor.
-                <br/><code>Geometry geom = new Geometry("Box", b);</code> is creating a Geometry for the RootNode, passing through a String name of the shape and the variable we created previous, b.
-                <br/><code>Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");</code> is defining the material, which is what the user actually sees, is defined using the <code>assetManager</code>, which is a variable inside our <code>SimpleApplication</code> and with the path of a unshaded texture.
-                <br/><code>mat.setColor("Color", ColorRGBA.Blue);</code> is just setting the color of the material.
-                <br/><code>geom.setMaterial(mat);</code> is setting the material of the geometry to the material we defined up above, <code>mat</code>.
-                <br/><code>rootNode.attachChild(geom);</code> is attaching the geometry to the <code>rootNode</code>, a variable inside <code>SimpleApplication</code>
+                If you'll notice, there is also one other method with a body. The <code>simpleInitApp()</code> method is an overrided method from the parent class, <code>SimpleApplication</code>.<br />
+                It runs as soon as the app is ran inside the Main Method.<br />
+                <code>Box b = new Box(1,1,1);</code> is creating a Box Shape, passing the dimensions through the constructor.<br />
+                <code>Geometry geom = new Geometry("Box", b);</code> is creating a Geometry for the RootNode, passing through a String name of the shape and the variable we created previous, b.<br />
+                <code>Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");</code> is defining the material, which is what the user actually sees, is defined using the <code>assetManager</code>, which is a variable inside our <code>SimpleApplication</code> and with the path of a unshaded texture.<br />
+                <code>mat.setColor("Color", ColorRGBA.Blue);</code> is just setting the color of the material.<br />
+                <code>geom.setMaterial(mat);</code> is setting the material of the geometry to the material we defined up above, <code>mat</code>.<br />
+                <code>rootNode.attachChild(geom);</code> is attaching the geometry to the <code>rootNode</code>, a variable inside <code>SimpleApplication</code>
             </p>
 
             <div class="CodeWidget">
@@ -162,8 +163,8 @@
             <hr/>
             <h3 id="UnderstandingTheSimpleApplication">Understanding the <em>Simple</em> Application</h3>
             <p>
-                To truly learn how to operate the concrete class, it is important to delve into the abstract class to learn how what you can use from the parent.
-                <br/> If you press Shift and click on SimpleApplication, it will bring you into the class. <br />
+                To truly learn how to operate the concrete class, it is important to delve into the abstract class to learn how what you can use from the parent.<br/> 
+                If you press Shift and click on SimpleApplication, it will bring you into the class. <br />
             </p>
             <img src="./images/SimpleApplication.png"/>
             <p>
