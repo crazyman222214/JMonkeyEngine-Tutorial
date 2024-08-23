@@ -98,7 +98,7 @@
             </p>
             <img src="./images/FirstRun.png">
             <p>
-                That blue box is the one created by the initial <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/simpleapplication.html">SimpleInitApp()</a></code><br />
+                That blue box is the one created by the initial <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/simpleapplication.html" target="_blank">SimpleInitApp()</a></code><br />
                 The controls to use the camera are:
                 <div class="container">
                     <ul>
@@ -113,10 +113,10 @@
             <p>
                 Going back to the code, there are a few things of note.<br/>
                 The <code href="https://www.baeldung.com/java-main-method">Main</code> method contains 3 lines of <strong>important</strong> code.<br/>
-                <code href="">Test app = new Test();</code> creates an instance of this class since <code>Main()</code> is static.<br/>
-
-                <code>app.showSettings(false);</code> set this to true and see the settings.<br/>
-                <code>app.start();</code> starts the application.
+                <code>Test app = new Test();</code> creates an instance of this class since <code><a href="https://www.baeldung.com/java-main-method" target="_blank">Main()</a></code> is static.<br/>
+                
+                <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/app/SimpleApplication.html#showSettings" target="_blank">app.showSettings(false);</code> set this to true and see the settings.</a><br/>
+                <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/app/SimpleApplication.html#start--" target="_blank">app.start();</a></code> starts the application.
             </p>
 
             <div class="CodeWidget">
@@ -129,14 +129,14 @@
                 </ol>
             </div>
             <p>
-                If you'll notice, there is also one other method with a body. The <code>simpleInitApp()</code> method is an overrided method from the parent class, <code>SimpleApplication</code>.<br />
+                If you'll notice, there is also one other method with a body. The <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/simpleapplication.html" target="_blank">simpleInitApp()</a></code> method is an overrided method from the parent class, <code>SimpleApplication</code>.<br />
                 It runs as soon as the app is ran inside the Main Method.<br />
-                <code>Box b = new Box(1,1,1);</code> is creating a Box Shape, passing the dimensions through the constructor.<br />
-                <code>Geometry geom = new Geometry("Box", b);</code> is creating a Geometry for the RootNode, passing through a String name of the shape and the variable we created previous, b.<br />
-                <code>Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");</code> is defining the material, which is what the user actually sees, is defined using the <code>assetManager</code>, which is a variable inside our <code>SimpleApplication</code> and with the path of a unshaded texture.<br />
-                <code>mat.setColor("Color", ColorRGBA.Blue);</code> is just setting the color of the material.<br />
-                <code>geom.setMaterial(mat);</code> is setting the material of the geometry to the material we defined up above, <code>mat</code>.<br />
-                <code>rootNode.attachChild(geom);</code> is attaching the geometry to the <code>rootNode</code>, a variable inside <code>SimpleApplication</code>
+                <code><a href="https://javadoc.jmonkeyengine.org/3.4.0-alpha1/com/jme3/scene/shape/Box.html" target="_blank">Box b = new Box(1,1,1);</a></code> is creating a Box Shape, passing the dimensions through the constructor.<br />
+                <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/scene/Geometry.html" target="_blank">Geometry geom = new Geometry("Box", b);</a></code> is creating a Geometry for the RootNode, passing through a String name of the shape and the variable we created previous, b.<br />
+                <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-beta4/com/jme3/material/Material.html" target="_blank">Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");</a></code> is defining the material, which is what the user actually sees, is defined using the <code>assetManager</code>, which is a variable inside our <code>SimpleApplication</code> and with the path of a unshaded texture.<br />
+                <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-beta4/com/jme3/material/Material.html#setColor-java.lang.String-com.jme3.math.ColorRGBA-" target="_blank">mat.setColor("Color", ColorRGBA.Blue);</a></code> is just setting the color of the material.<br />
+                <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/scene/Geometry.html#setMaterial-com.jme3.material.Material-" target="_blank">geom.setMaterial(mat);</a></code> is setting the material of the geometry to the material we defined up above, <code>mat</code>.<br />
+                rootNode.attachChild(geom); is attaching the geometry to the rootNode, a variable inside <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/simpleapplication.html">SimpleApplication</a></code>
             </p>
 
             <div class="CodeWidget">
@@ -168,7 +168,7 @@
             </p>
             <img src="./images/SimpleApplication.png"/>
             <p>
-                The first thing I would like to point out is at the bottom is the methods you inherit in your <code>Main</code> class.
+                The first thing I would like to point out is at the bottom is the methods you inherit in your <code><a href="https://www.baeldung.com/java-main-method" target="_blank">Main</a></code> class.
             </p>
             <img src="./images/InheritedMethods.png" />
 
@@ -176,11 +176,11 @@
                 Another thing that would help in learning this library is to become familiar with what getters and setters are available to you. <br/>
                 The next thing that I would like to point out is the constructor of the class. By default, it makes new instances of:
                 <ul>
-                    <li><code>StatsAppState</code></li>
-                    <li><code>FlyCamAppState</code></li>
-                    <li><code>AudioListenerState</code></li>
-                    <li><code>DebugKeysAppState</code></li>
-                    <li><code>ConstantVerifierState</code></li>
+                    <li><code href="https://javadoc.jmonkeyengine.org/v3.6.1-stable/com/jme3/app/StatsAppState.html" target="_blank">StatsAppState</code></li>
+                    <li><code href="https://javadoc.jmonkeyengine.org/3.4.0-alpha1/com/jme3/app/FlyCamAppState.html" target="_blank">FlyCamAppState</code></li>
+                    <li><code href="https://javadoc.jmonkeyengine.org/v3.6.0-alpha3/com/jme3/audio/AudioListenerState.html" target="_blank">AudioListenerState</code></li>
+                    <li><code href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/app/DebugKeysAppState.html" target="_blank">DebugKeysAppState</code></li>
+                    <li><code href="https://javadoc.jmonkeyengine.org/v3.3.0-beta1/com/jme3/app/state/ConstantVerifierState.html" target="_blank">ConstantVerifierState</code></li>
                 </ul>
             </p>
             <p>
@@ -196,14 +196,14 @@
             <p>
                 For the most part, this method is to create different variable and assign them. 
                 <ol>
-                    <li>The first notable part is assigning a <code>flyCam</code>, then assigns the state in the <code>stateManager</code>.</li>
+                    <li>The first notable part is assigning a <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/renderer/camera.html#flyby-camera" target="_blank">flyCam</a></code>, then assigns the state in the <code>stateManager</code>.</li>
                     <li>The next part adds the mapping to have ESC key close the program and F5 to Hide/Show the stats on the window.</li>
-                    <li>After that, it calls the <code>simpleInitApp()</code>.</li>
+                    <li>After that, it calls the <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/simpleapplication.html" target="_blank">simpleInitApp()</a></code>.</li>
                 </ol>
             </p>
             <p>
-                <strong>Meaning that as soon as the <code>Main</code> method is called, you need to have the first line make a new instance of the concrete class.</strong><br />
-                As soon as the <code>Main</code> class runs, your <code>SimpleInitApp()</code> code will run <strong>before</strong> anything else in the <code>Main</code> method.<br/>
+                <strong>Meaning that as soon as the <code><a href="https://www.baeldung.com/java-main-method" target="_blank">Main</a></code> method is called, you need to have the first line make a new instance of the concrete class.</strong><br />
+                As soon as the <code href="https://www.baeldung.com/java-main-method" target="_blank"><a>Main</a></code> class runs, your <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/simpleapplication.html" target="_blank">SimpleInitApp()</a></code> code will run <strong>before</strong> anything else in the Main method.<br/>
                 This can be used to do things prior to when the user can see the pop-up window, but it also needs to be used precisely to avoid bugs.
             </p>
         </section>
@@ -212,8 +212,8 @@
             <hr/>
             <h3 id="UsingTheFlyByCamera">Using the FlyByCamera</h3>
             <p>
-                The <code>flyCam</code> variable is a public variable given to us through the parent class. This is the camera that the player can control.<br />
-                To disable the camera, and disable the player being able to move it, you can use <code>flyCam.setEnabled(false);</code>
+                The <a href="https://wiki.jmonkeyengine.org/docs/3.4/core/renderer/camera.html#flyby-camera" target="_blank">flyCam</a></code> variable is a public variable given to us through the parent class. This is the camera that the player can control.<br />
+                To disable the camera, and disable the player being able to move it, you can use <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/input/FlyByCamera.html#setEnabled-boolean-" target="_blank">flyCam.setEnabled(false)</a>;</code>
             </p>
 
             <div class="CodeWidget">
@@ -227,7 +227,7 @@
             </p>
             <h3 id="MovingTheCamera">Moving The Camera</h3>
             <p>
-                Because of how they have the encapsulation, we must interact with the position of the camera using <code>flyCam.onAnalog();</code><br/>
+                Because of how they have the encapsulation, we must interact with the position of the camera using <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/input/FlyByCamera.html#onAnalog-java.lang.String-float-float-" target="_blank">flyCam.onAnalog();</a></code><br/>
                 This method takes in 3 parameters:
                 <ol>
                     <li>String: Name</li>
@@ -236,25 +236,21 @@
                 </ol>
                 <br/>
                 The name parameter has a certain convention that they use. <br/>
-                If you Shift + Click on the <code>onAnalog()</code> method, you can find the String Variables.<br />
+                If you Shift + Click on the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/input/FlyByCamera.html#onAnalog-java.lang.String-float-float-" target="_blank">onAnalog()</a></code> method, you can find the String Variables.<br />
                 To find the string representation, you can Shift + Click on the CameraInput class to look at all of them.
             </p>
             <img src="./images/CameraInput.png"/>
             <p>
-                Meaning that if I were to write the line <code>flyCam.onAnalog("FLYCAM_StrafeRight", 2, 200);</code> I would get something that looks like this:
+                Meaning that if I were to write the line <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/input/FlyByCamera.html#onAnalog-java.lang.String-float-float-" target="_blank">flyCam.onAnalog("FLYCAM_StrafeRight", 2, 200);</a></code> I would get something that looks like this:
             </p>
             <img src="./images/onAnalog(Right).png" />
             <h3 id="HavingFunWithSimpleUpdate">Having fun with simpleUpdate()</h3>
             <p>
-                One of the defaulted methods within the <code>Main</code> class is the <code>simpleUpdate(float tpf)</code> method. <br/>
+                One of the defaulted methods within the Main class is the <code><a href="https://wiki.jmonkeyengine.org/docs/3.4/core/app/update_loop.html" target="_blank">simpleUpdate(float tpf)</a></code> method. <br/>
                 The one parameter stands for Time Per Frame, which is the &Delta; (Delta) of time between each Frame. <br />
                 We can utilize this part of the code to make it so that we move the camera every frame, effectively making an "Animation". <br />
-            </p>
-            <p>
                 I would personally seperate the function call into a method, so that we can single out all camera movement into one method. <br />
-                Also, I would recommend that you make the length of the camera movement <strong>WAY</strong> shorter so you can actually witness the animation.
             </p>
-            
             <div class="CodeWidget">
                 <ol>
                     <li><div class="Keyword">private void</div><div class="Name">updateCamera()</div> <div>{</div></li>
@@ -292,11 +288,11 @@
                 This will help us to be able to access the files. <br />
             </p>
             <p>
-                We need to call the <code>assetManager</code> class built into the <code>SimpleApplication</code> class and use the <code>.registerLocator("/Assets", FileLocator.Class)</code> method.<br />
-                It has two parameters, the first string is to tell the <code>SimpleApplication</code> from which to locate assets for the given AssetLocator.<br />
-                The second parameter is the class type of AssetLocator to use. Primarily you will just use the Parent <code>FileLocator</code> class, but there are use cases where subclasses can be useful!<br />
-                Now we are going to use the <code>.loadModel(-File Directory-)</code>  method and store it as a <code>Spatial</code> variable.<br />
-                Finally we can load the model using <code>rootNode.attachChild(object);</code>
+                We need to call the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/asset/AssetManager.html">assetManager</a></code> class built into the SimpleApplication class and use the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/asset/AssetManager.html#registerLocator-java.lang.String-java.lang.Class-">.registerLocator("/Assets", FileLocator.Class)</a></code> method.<br />
+                It has two parameters, the first string is to tell the SimpleApplicatio from which to locate assets for the given AssetLocator.<br />
+                The second parameter is the class type of AssetLocator to use. Primarily you will just use the Parent <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-stable/com/jme3/asset/plugins/FileLocator.html">FileLocator</a></code> class, but there are use cases where subclasses can be useful!<br />
+                Now we are going to use the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/asset/AssetManager.html#loadModel-java.lang.String-">.loadModel(-File Directory-)</a></code>  method and store it as a <code>Spatial</code> variable.<br />
+                Finally we can load the model using rootNode.attachChild(object);
             </p>
             <div class="CodeWidget">
                 <ol>
@@ -316,15 +312,15 @@
             <p>
                 As you can see, even though the asset is being created in the world, we cannot see it. <br />
                 This is because loading assets use a lighting system to represent lighting <br />
-                For this, we are going to use the <code>DirectionalLight</code> class. Just know that you can also use any subclass of the abstract <code>Light</code> class. <br />
-                This class is rather simple to implement. First create an instance of the <code>DirectionalLight</code><br />
-                Then we need to assign the direction of the light with <code>.setDirection(Vector3f)</code> method. <br />
+                For this, we are going to use the <code><a href="https://javadoc.jmonkeyengine.org/v3.3.0-beta2/com/jme3/light/DirectionalLight.html">DirectionalLight</a></code> class. Just know that you can also use any subclass of the abstract Light class. <br />
+                This class is rather simple to implement. First create an instance of the DirectionalLight<br />
+                Then we need to assign the direction of the light with <code><a href="https://javadoc.jmonkeyengine.org/v3.3.0-beta2/com/jme3/light/DirectionalLight.html#setDirection-com.jme3.math.Vector3f-">.setDirection(Vector3f)</a></code> method. <br />
                 If you don't understand Vectors, just think of them as arrows pointing from a point outwards. <br />
                 Since we are working in 3d, we need to give it an x, y, & z position <br />
-                Normally we just declare a new instance of the <code>Vector3f</code> class anytime we need to use one. <br />
-                So inside of the <code>setDirection()</code> method, we need to put <code>new Vector3f(-3, 5, 3).normalizelocal()</code> <br />
+                Normally we just declare a new instance of the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/math/Vector3f.html">Vector3f</a></code> class anytime we need to use one. <br />
+                So inside of the setDirection() method, we need to put <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/math/Vector3f.html#normalizeLocal--">new Vector3f(-3, 5, 3).normalizelocal()</a></code> <br />
                 Now I am not going to get into normalizing a vector, but it is just some math to make sure our vectors are correctly project our light. <br />
-                Now all we need to do is add the light to the rootNode with <code>rootNode.addLight(dl)</code>
+                Now all we need to do is add the light to the rootNode with rootNode.addLight(dl).
             </p>
             <div class="CodeWidget">
                 <ol>
@@ -372,21 +368,21 @@
             <p>
                 One reason I like DirectionalLight is that since you have 4 different light sources, you can use one of them to change the light properties. <br />
                 I added this snippit of code to the simpleUpdate method so we can see a simple animation of the light source. <br />
-                we can also change the color of the first DirectionalLight to red using the <code>.setColor(ColorRGBA.Red);</code> method so that we can actually see the animation. <br />
+                we can also change the color of the first DirectionalLight to red using the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/light/Light.html#setColor-com.jme3.math.ColorRGBA-">.setColor(ColorRGBA.Red);</a></code> method so that we can actually see the animation. <br />
                 The animation should look something like this:
             </p>
             <!--TODO: Record video for animation-->
             <p>
                 Take a moment after the animation to look at how the colored light changes the asset. Now you can see the creativity of having DirectionalLight!<br />
-                It may not be the right choice for your project, so I would encourage you also look into which subclass of <code>Light</code> to see which one suits your needs. <br />
+                It may not be the right choice for your project, so I would encourage you also look into which subclass of <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/light/Light.html">Light</a></code> to see which one suits your needs. <br />
             </p>
         </section>
         <section id="UserInputSection">
             <h2 id="UserInput">User Input</h2>
             <h3 id="KeyboardInput">Keyboard Input</h3>
             <p>
-                To implement user input in the form of keyboard input, we need to implement the <code>ActionListener</code> interface. <br />
-                If we look inside this interface, we see that we only need to override the <code>onAction()</code> method, that has 3 parameters. <br />
+                To implement user input in the form of keyboard input, we need to implement the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/input/controls/ActionListener.html">ActionListener</a></code> interface. <br />
+                If we look inside this interface, we see that we only need to override the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/input/controls/ActionListener.html#onAction-java.lang.String-boolean-float-">onAction()</a></code> method, that has 3 parameters. <br />
                 <ol>
                     <li>String name: The name of the input we are going to use</li>
                     <li>bool isPressed: Tells if the input was pressed or not</li>
@@ -397,7 +393,7 @@
                 The way we implement this is two fold:
                 <ol>
                     <li>Make the Methods for each input we want</li>
-                    <li>Tell the <code>inputManager</code> what mappings to listen for and which listener is handling the events</li>
+                    <li>Tell the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-stable/com/jme3/input/InputManager.html">inputManager</a></code> what mappings to listen for and which listener is handling the events</li>
                 </ol>
             </p>
             <p>
@@ -426,12 +422,12 @@
             </div>
             <p>
                 Obviously this is simplistic, but we can implement more complex methods later. <br />
-                We now need to tell the <code>inputManager</code> about our inputs. <br />
-                We can do this by using the <code>.addMapping()</code> & <code>.addListener</code> methods. <br />
-                We have a couple parameters with the <code>.addMapping()</code> method. <br />
+                We now need to tell the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-stable/com/jme3/input/InputManager.html">inputManager</a></code> about our inputs. <br />
+                We can do this by using the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-stable/com/jme3/input/InputManager.html#addMapping-java.lang.String-com.jme3.input.controls.Trigger...-">.addMapping()</a></code> & <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-stable/com/jme3/input/InputManager.html#addMapping-java.lang.String-com.jme3.input.controls.Trigger...-">.addListener()</a></code> methods. <br />
+                We have a couple parameters with the .addMapping() method. <br />
                 We need the String mapping name, which for this is "P", <br />
-                We also need a <code>KeyTrigger</code> object, which takes a enum value, or technically an int value. <br />
-                We can use the <code>KeyInput</code> enum to acomplish this. <br />
+                We also need a <code><a href="https://javadoc.jmonkeyengine.org/v3.3.0-beta2/com/jme3/input/controls/KeyTrigger.html">KeyTrigger</a></code> object, which takes a enum value, or technically an int value. <br />
+                We can use the <code><a href="https://javadoc.jmonkeyengine.org/3.4.0-alpha1/com/jme3/input/KeyInput.html">KeyInput</a></code> enum to acomplish this. <br />
             </p>
             <p>
                 After we map the input to the inputManager, then we need to add reference to the ActionListener that is going to listen and respond for the action.<br />
@@ -455,35 +451,35 @@
 
                 This concept in itself is pretty simple since JMonkeyEngine handles a lot of the math, but understanding the math at a fundamental level is needed to understand the code. <br />
                 So, to get mouse input is another input managed by the ActionListener, so we can quickly implement that for the left click. <br />
-                When we add the mapping, we need to use a <code>MouseButtonTrigger</code> object and use the <code>MouseInput.BUTTON_LEFT</code> enum value for the constructor. <br />
-                Other than that, it is the same process as before. In the if statement inside the <code>actionListener</code>, I am calling a method I will be doing the logic in. <br />
+                When we add the mapping, we need to use a <code><a href="https://javadoc.jmonkeyengine.org/v3.5.0-beta9/com/jme3/input/controls/MouseButtonTrigger.html">MouseButtonTrigger</a></code> object and use the MouseInput.BUTTON_LEFT enum value for the constructor. <br />
+                Other than that, it is the same process as before. In the if statement inside the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/input/controls/ActionListener.html">actionListener</a></code>, I am calling a method I will be doing the logic in. <br />
             </p>
             <p>
                 So we are going to do a simple method that detects if you are clicking an object in the world.<br />
-                To do this, we need to create a <code>CollisionResults</code> variable, which is going to hold the result of our collision.<br />
+                To do this, we need to create a <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-beta1/com/jme3/collision/CollisionResults.html">CollisionResults</a></code> variable, which is going to hold the result of our collision.<br />
                 We also need to get the cursor position on the screen, which is stored as a Vector2f. <br />
-                We can get this through the <code>inputManager.getCursorPosition()</code> method. <br />
+                We can get this through the <code><a hef="https://javadoc.jmonkeyengine.org/v3.4.0-stable/com/jme3/input/InputManager.html#getCursorPosition--">inputManager.getCursorPosition()</a></code> method. <br />
                 Although the screen is 2d, we need to interact with the world, we need three dimensions. <br/>
-                We can get this through the <code>cam.getWorldCoordinates()</code> method.
+                We can get this through the cam.getWorldCoordinates() method.
                 The two parameters are our Vector2f, and the Z position you want to project at. For this I am going to leave it at 0. <br /><br />
 
                 We also need to get the direction that the cursor is pointing in reference to the 3d world. <br />
-                To do this, we are going to use the <code>cam.getWorldCoordinates()</code> <br />
+                To do this, we are going to use the cam.getWorldCoordinates() <br />
                 We are still going to use our cursor position, but for the Z position, we are going to put 1. <br />
                 After we get the coordinate, we need to subtract it from our position in 3d to get a vector that represents the direction of our point in reference to our world. <br />
                 We still need to normalize the vector. <br />
             </p>
 
             <p>
-                Now that we have the point in space that we are clicking at and a direction that we are clicking towards, we can now create a <code>Ray</code>. <br />
+                Now that we have the point in space that we are clicking at and a direction that we are clicking towards, we can now create a <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/math/Ray.html">Ray</a></code>. <br />
                 This ray is a mathematical ray, that starts at a point and is a one-directional line going into a direction. <br />
-                Using this, we can check for collisions with the <code>rootNode.collideWith()</code> method. <br />
-                The two parameters it wants is our ray that we just created, and the <code>CollisionResults</code> variable we made at the beginning. <br />
-                This method finds the collision of all objects that collides with the ray and compiles it into our <code>CollisionResults</code> for us to use. <br />
-                If you look inside the <code>CollisionResults</code> class, you can see that it has an arraylist of <code>CollisionResult</code>, <br />
+                Using this, we can check for collisions with the rootNode.collideWith() method. <br />
+                The two parameters it wants is our ray that we just created, and the <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-beta1/com/jme3/collision/CollisionResults.html">CollisionResults</a></code> variable we made at the beginning. <br />
+                This method finds the collision of all objects that collides with the ray and compiles it into our <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-beta1/com/jme3/collision/CollisionResults.html">CollisionResults</a></code> for us to use. <br />
+                If you look inside the <code>CollisionResults</code> class, you can see that it has an arraylist of <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-beta1/com/jme3/collision/CollisionResults.html">CollisionResult</a></code>, <br />
                 That class has the Geometry that we collided with, the contact point, and distance, along with a few others but we aren't interested in them. <br />
                 With this, we can index into the Geometry that we have clicked. <br />
-                Using <code>results.getCollision(0).getGeometry()</code>, we have access to the geometry and can manipulate it.
+                Using <code><a href="https://javadoc.jmonkeyengine.org/v3.4.0-beta1/com/jme3/collision/CollisionResults.html#getCollision-int-">results.getCollision(0).getGeometry()</a></code>, we have access to the geometry and can manipulate it.
             </p>
             <div class="CodeWidget">
                 <ol>
@@ -516,16 +512,16 @@
             <p>
                 The difference will become apparent once you use them. They both have their reasons to be used.<br/>
                 From the last section, we now have access to the geometry in our world, so we can use that to see the difference<br />
-                If you type <code>geometry.</code>, you can see all of the methods available to you. <br/>
+                If you type <code><a href="https://javadoc.jmonkeyengine.org/v3.4.1-stable/com/jme3/scene/Geometry.html">geometry.</a></code>, you can see all of the methods available to you. <br/>
                 Notice that you can set local translation, but you cannot set world translation<br/>
                 This is because the world translation is the position relative to the world, so it doesn't make sense for the geometry to set the world's translation<br />
                 Although you cannot set the world translation, you can get the world translation, and this is so that you can know where the geometry is in relation to the world<br />
                 If we were to set local translation, we are setting how many units away from the spawn location of the geometry. <br />
                 This is a important part to understand as where the geometry spawn is regarded as (0,0,0) with local translation<br />
-                There is another method that works similarly, and that is the <code>.move()</code> method. <br />
-                The <code>.move()</code> method moves the geometry from it's given position. <br />
+                There is another method that works similarly, and that is the <code><a href="https://javadoc.jmonkeyengine.org/3.4.0-alpha1/com/jme3/scene/Spatial.html#move-com.jme3.math.Vector3f-">.move()</a></code> method. <br />
+                The <code><a href="https://javadoc.jmonkeyengine.org/3.4.0-alpha1/com/jme3/scene/Spatial.html#move-com.jme3.math.Vector3f-">.move()</a></code> method moves the geometry from it's given position. <br />
                 This is the equivalent to a += operator, as it takes the current position and moves it in the given Vector3f <br/>
-                For the most part, it is more intuitive to use <code>.move()</code> over <code>.setLocalTranslation()</code>, with the exception of moving the geometry for the first time since the geometry is at (0,0,0) <br/>
+                For the most part, it is more intuitive to use <code><a href="https://javadoc.jmonkeyengine.org/3.4.0-alpha1/com/jme3/scene/Spatial.html#move-com.jme3.math.Vector3f-">.move()</a></code> over <code><a href="https://javadoc.jmonkeyengine.org/3.4.0-alpha1/com/jme3/scene/Spatial.html#setLocalTranslation-com.jme3.math.Vector3f-">.setLocalTranslation()</a></code>, with the exception of moving the geometry for the first time since the geometry is at (0,0,0) <br/>
             </p>
             <div class="CodeWidget">
                 <ol>
